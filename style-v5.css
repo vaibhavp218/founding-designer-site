@@ -425,6 +425,191 @@
 }
 
 /* ============================================================
+   Fluid desktop layout
+   Keeps the 1440px design proportions while allowing every
+   desktop width to scale inside the viewport instead of clipping.
+   ============================================================ */
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: clamp(24px, 6.94vw, 100px);
+    --content-max: 1240px;
+    --content-width: min(var(--content-max), calc(100vw - (var(--page-gutter) * 2)));
+  }
+
+  .header__inner,
+  .hero__content,
+  .roles__inner,
+  .values__inner,
+  .portfolio__inner,
+  .engagement__inner,
+  .site-footer__inner {
+    width: var(--content-width);
+    max-width: var(--content-max);
+  }
+
+  .header__inner {
+    padding: 0;
+  }
+
+  .header__right {
+    gap: clamp(36px, 8.68vw, 125px);
+  }
+
+  .header__nav {
+    gap: clamp(24px, 4.17vw, 60px);
+  }
+
+  .header__nav-link {
+    font-size: clamp(17px, 1.39vw, 20px);
+  }
+
+  .hero {
+    height: clamp(680px, 55.35vw, 797px);
+  }
+
+  .hero__content {
+    max-width: none;
+    margin-top: clamp(156px, 14.93vw, 215px);
+  }
+
+  .hero__headline-line {
+    font-size: clamp(58px, 6.56vw, 94.472px);
+  }
+
+  .hero__tagline {
+    font-size: clamp(19px, 1.67vw, 24px);
+  }
+
+  .roles__inner,
+  .values__inner,
+  .portfolio__inner,
+  .engagement__inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .roles__layout {
+    gap: clamp(32px, 4.4vw, 63.36px);
+  }
+
+  .roles__anim {
+    width: min(51.52vw, 638.88px);
+    height: auto;
+    aspect-ratio: 638.88 / 460.24;
+  }
+
+  .roles__accordion {
+    min-width: 320px;
+  }
+
+  .values__grid,
+  .portfolio__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .values__icon-wrap {
+    width: min(100%, 343px);
+  }
+
+  .values__card--founding {
+    flex-basis: clamp(300px, 29.03vw, 360px);
+  }
+
+  .values__card--orange {
+    min-height: clamp(520px, 50.48vw, 626px);
+  }
+
+  .values__card-badge {
+    width: clamp(190px, 19.84vw, 246px);
+    height: clamp(190px, 19.84vw, 246px);
+  }
+
+  .values__card-badge img {
+    width: 68%;
+    height: 68%;
+  }
+
+  .values__card--motion {
+    flex-basis: clamp(236px, 22.74vw, 282px);
+  }
+
+  .portfolio__card {
+    height: clamp(440px, 42.18vw, 523px);
+  }
+
+  .portfolio__card-image {
+    top: clamp(164px, 15.48vw, 192px);
+    width: min(514px, calc(100% + clamp(80px, 9vw, 112px)));
+    height: clamp(300px, 29.6vw, 367px);
+  }
+
+  .services {
+    min-height: clamp(720px, 61.04vw, 879px);
+    --services-content-left: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2));
+    --services-card-shift-x: clamp(0px, 4.38vw, 63px);
+    --svc-card-scale: clamp(0.62, 5.56vw, 0.8);
+  }
+
+  .services__inner {
+    left: var(--services-content-left);
+    width: var(--content-width);
+    max-width: var(--content-max);
+  }
+
+  .services__selector-wrap,
+  .services__stages {
+    width: 100%;
+  }
+
+  .services__stage {
+    padding-left: clamp(12px, 1.39vw, 20px);
+    padding-right: clamp(12px, 1.39vw, 20px);
+  }
+
+  .services__stage-sub {
+    font-size: clamp(14px, 1.25vw, 18px);
+  }
+
+  .transform-cta__card {
+    width: var(--content-width);
+    max-width: var(--content-max);
+  }
+
+  .transform-cta__content {
+    width: 47.42%;
+    padding:
+      clamp(72px, 8.39vw, 104px)
+      clamp(28px, 3.55vw, 44px)
+      clamp(48px, 5.16vw, 64px)
+      clamp(32px, 3.87vw, 48px);
+  }
+
+  .transform-cta__heading {
+    font-size: clamp(36px, 3.87vw, 48px);
+  }
+
+  .transform-cta__visual {
+    flex: 1;
+    width: auto;
+  }
+
+  .transform-cta__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .site-footer {
+    padding-left: var(--page-gutter);
+    padding-right: var(--page-gutter);
+  }
+
+  .site-footer__top,
+  .site-footer__wordmark {
+    width: 100%;
+  }
+}
+
+/* ============================================================
    Mobile - Hero section
    Breakpoint: 430px and below
    ============================================================ */

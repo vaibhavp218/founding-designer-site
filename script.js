@@ -216,6 +216,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!card || !pose) return;
 
         const isActive = stage.active.includes(key);
+        const desktopLayoutWidth = 1240;
+        const desktopLayoutHeight = 879;
+        const servicesWidth = Math.min(desktopLayoutWidth, servicesSection.clientWidth || desktopLayoutWidth);
+        const servicesHeight = Math.min(desktopLayoutHeight, servicesSection.clientHeight || desktopLayoutHeight);
+        const layoutScaleX = mobileServicesQuery.matches ? 1 : Math.max(0.62, servicesWidth / desktopLayoutWidth);
+        const layoutScaleY = mobileServicesQuery.matches ? 1 : Math.max(0.78, servicesHeight / desktopLayoutHeight);
         const cardScale = getComputedStyle(card).getPropertyValue('--svc-card-scale').trim() || '1';
         const cardStyles = getComputedStyle(card);
         const inactiveLift = parseFloat(cardStyles.getPropertyValue('--svc-inactive-card-lift')) || 0;
@@ -242,8 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeShift = parseFloat(cardStyles.getPropertyValue(activeShiftVars[key])) || 0;
         const inactiveShift = parseFloat(cardStyles.getPropertyValue(inactiveShiftVars[key])) || 0;
         const inactiveLiftExtra = parseFloat(cardStyles.getPropertyValue(inactiveLiftExtraVars[key])) || 0;
-        const left = parseFloat(pose.left) + (isActive ? activeShift : inactiveShift);
-        const top = parseFloat(pose.top) - (isActive ? activeLift : inactiveLift + inactiveLiftExtra);
+        const left = (parseFloat(pose.left) + (isActive ? activeShift : inactiveShift)) * layoutScaleX;
+        const top = (parseFloat(pose.top) - (isActive ? activeLift : inactiveLift + inactiveLiftExtra)) * layoutScaleY;
         card.classList.toggle('disabled', !isActive);
         card.style.left = `${left}px`;
         card.style.top = `${top}px`;
