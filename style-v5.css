@@ -431,7 +431,7 @@
    ============================================================ */
 @media (min-width: 768px) {
   :root {
-    --page-gutter: clamp(24px, 6.94vw, 100px);
+    --page-gutter: clamp(40px, 7.25vw, 104px);
     --content-max: 1240px;
     --content-width: min(var(--content-max), calc(100vw - (var(--page-gutter) * 2)));
   }
@@ -464,16 +464,16 @@
   }
 
   .hero {
-    height: clamp(680px, 55.35vw, 797px);
+    height: clamp(620px, 52vw, 797px);
   }
 
   .hero__content {
     max-width: none;
-    margin-top: clamp(156px, 14.93vw, 215px);
+    margin-top: clamp(140px, 13.6vw, 215px);
   }
 
   .hero__headline-line {
-    font-size: clamp(58px, 6.56vw, 94.472px);
+    font-size: clamp(58px, 6.18vw, 94.472px);
   }
 
   .hero__tagline {
@@ -499,7 +499,7 @@
   }
 
   .roles__accordion {
-    min-width: 320px;
+    min-width: min(320px, 44vw);
   }
 
   .values__grid,
@@ -534,20 +534,20 @@
   }
 
   .portfolio__card {
-    height: clamp(440px, 42.18vw, 523px);
+    height: clamp(410px, 38vw, 523px);
   }
 
   .portfolio__card-image {
-    top: clamp(164px, 15.48vw, 192px);
+    top: clamp(150px, 13.9vw, 192px);
     width: min(514px, calc(100% + clamp(80px, 9vw, 112px)));
-    height: clamp(300px, 29.6vw, 367px);
+    height: clamp(260px, 26.5vw, 367px);
   }
 
   .services {
-    min-height: clamp(720px, 61.04vw, 879px);
+    min-height: clamp(680px, 56vw, 879px);
     --services-content-left: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2));
     --services-card-shift-x: clamp(0px, 4.38vw, 63px);
-    --svc-card-scale: clamp(0.62, 5.56vw, 0.8);
+    --svc-card-scale: clamp(0.62, 5.25vw, 0.8);
   }
 
   .services__inner {
