@@ -1,0 +1,241 @@
+/* v2 overrides — loaded on top of style.css */
+
+/* ---- Spacing reductions ---- */
+.roles__inner {
+  padding-top: 44px;      /* reduced from 88px */
+  padding-bottom: 88px;   /* +10% of total frame height */
+  gap: 31.2px;            /* reduced from 52px */
+}
+
+.roles__heading {
+  font-size: 32.64px;     /* reduced from 38.4px (-15%) */
+  line-height: 1.257;
+}
+
+.roles__anim {
+  width: 638.88px;        /* 726px scaled */
+  height: 460.24px;       /* 523px scaled */
+}
+
+/* ---- Fix: Accordion takes natural height, not forced to match anim panel ---- */
+.roles__accordion {
+  align-self: flex-start;
+}
+
+/* ---- Fix: Inactive state padding leak ---- */
+.roles__item-inner {
+  padding-bottom: 0;
+}
+
+.roles__item--active .roles__item-inner {
+  padding-bottom: 28px;
+}
+
+
+/* ---- Tagline typography ---- */
+.roles__tagline {
+  font-weight: 400;
+  color: #6A6969;
+}
+
+/* ---- Reduce name → tagline gap by 30% (24px → 16.8px) ---- */
+.roles__item-header {
+  padding-bottom: 16.8px;
+}
+
+/* ---- Remove +/− icons ---- */
+.roles__item-icon {
+  display: none;
+}
+
+/* ---- Increase animation → accordion gap by 20% (52.8px → 63.36px) ---- */
+.roles__layout {
+  gap: 63.36px;
+}
+
+/* ---- Shift accordion text right, shortening line width ---- */
+.roles__accordion {
+  padding-left: 10.56px;
+}
+
+/* ---- Persona accent colors ---- */
+
+/* Persona name on active state */
+[data-role="founder"].roles__item--active .roles__item-name { color: #4558ED; }
+[data-role="pm"].roles__item--active .roles__item-name      { color: #FABA0A; }
+[data-role="cto"].roles__item--active .roles__item-name     { color: #FF5E2D; }
+
+/* Bullet icon recoloring via mask-image (replaces background-image approach) */
+.roles__bullets li::before {
+  background-image: none;
+  -webkit-mask-image: url('fi_2767140.svg');
+  mask-image: url('fi_2767140.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-color: #4558ED; /* fallback */
+}
+
+[data-role="founder"] .roles__bullets li::before { background-color: #4558ED; }
+[data-role="pm"] .roles__bullets li::before      { background-color: #FABA0A; }
+[data-role="cto"] .roles__bullets li::before     { background-color: #FF5E2D; }
+
+/* ============================================================
+   Values Section (Section 3) — v2 overrides only
+   Base structural styles live in style.css (lines 600–763)
+   ============================================================ */
+
+/* Tighter section padding */
+.values__inner {
+  padding: 70px 0;
+}
+
+/* Scaled heading */
+.values__heading {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Tighter grid & column gaps */
+.values__grid { gap: 14px; }
+.values__col  { gap: 14px; }
+
+/* Card scaling — smaller radius & padding */
+.values__card {
+  border-radius: 8px;
+  padding: 20px 12px;
+}
+
+/* Orange card — uniform padding, no extra padding-bottom on badge */
+.values__card--orange {
+  padding: 24px 16px;
+}
+
+.values__card-badge {
+  padding-bottom: 0;
+}
+
+/* ============================================================
+   Services Section (Section 5) — v2 Figma alignment
+   ============================================================ */
+
+.services {
+  --services-content-left: calc((100vw - 1240px) / 2);
+  --services-stage-shift-x: 0px;
+  --services-card-shift-x: 63px;
+  height: 839px;
+  min-height: 839px;
+}
+
+.services__inner {
+  position: absolute;
+  left: var(--services-content-left);
+  top: 61px;
+  width: 1240px;
+  max-width: none;
+  padding: 0;
+  gap: 24px;
+}
+
+.services__heading {
+  max-width: 599px;
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.services__heading em {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.services__selector-wrap {
+  margin-left: var(--services-stage-shift-x);
+  width: 1218px;
+  gap: 30px;
+}
+
+.services__stages {
+  width: 1218px;
+  min-height: 118px;
+  border-radius: 0;
+}
+
+.services__stage {
+  min-height: 118px;
+  padding: 32px 20px;
+}
+
+.services__stage--active .services__stage-name {
+  color: var(--orange);
+}
+
+.services__stage:first-child .services__stage-name {
+  font-weight: 500;
+}
+
+.services__stage.services__stage--active .services__stage-name {
+  font-weight: 600;
+}
+
+.services__stage-sub {
+  font-size: 18px;
+  color: var(--grey);
+}
+
+.svc-card {
+  width: 309px;
+  height: 313px;
+  margin-left: var(--services-card-shift-x);
+  transition:
+    left 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    top 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 220ms ease;
+  will-change: left, top;
+}
+
+.svc-card__artifact {
+  display: block;
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.svc-card__icon {
+  display: block;
+}
+
+.svc-card__name {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.svc-card--build .svc-card__artifact {
+  top: 89px;
+  left: 48px;
+  width: 200px;
+}
+
+.svc-card--ux .svc-card__artifact {
+  top: 85px;
+  left: 48px;
+  width: 215px;
+}
+
+.svc-card--revamp .svc-card__artifact {
+  top: 108px;
+  left: 72px;
+  width: 167px;
+}
+
+.svc-card--design-system .svc-card__artifact {
+  top: 90px;
+  left: 66px;
+  width: 178px;
+}
+
+.svc-card--strategic .svc-card__artifact {
+  top: 96px;
+  left: 69px;
+  width: 172px;
+}
