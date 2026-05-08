@@ -218,10 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const isActive = stage.active.includes(key);
         const desktopLayoutWidth = 1240;
         const desktopLayoutHeight = 879;
+        const mobileLayoutWidth = 412;
         const servicesInner = servicesSection.querySelector('.services__inner');
         const servicesWidth = Math.min(desktopLayoutWidth, servicesInner?.clientWidth || servicesSection.clientWidth || desktopLayoutWidth);
         const servicesHeight = Math.min(desktopLayoutHeight, servicesSection.clientHeight || desktopLayoutHeight);
-        const layoutScaleX = mobileServicesQuery.matches ? 1 : Math.max(0.62, servicesWidth / desktopLayoutWidth);
+        const layoutScaleX = mobileServicesQuery.matches
+          ? Math.min(1, servicesWidth / mobileLayoutWidth)
+          : Math.max(0.62, servicesWidth / desktopLayoutWidth);
         const layoutScaleY = mobileServicesQuery.matches ? 1 : Math.max(0.78, servicesHeight / desktopLayoutHeight);
         const cardScale = getComputedStyle(card).getPropertyValue('--svc-card-scale').trim() || '1';
         const cardStyles = getComputedStyle(card);
