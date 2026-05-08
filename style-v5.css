@@ -1300,15 +1300,19 @@
   }
 
   .engagement__card-panel--cobuild .engagement__card-illus {
-    width: 100%;
+    width: 108.974%;
+    max-width: none;
     height: 100%;
     object-fit: fill;
+    transform: translateX(-8.235%);
   }
 
   .engagement__card-panel--fixed .engagement__card-illus {
-    width: 100%;
+    width: 108.974%;
+    max-width: none;
     height: 100%;
     object-fit: fill;
+    transform: translateX(-8.235%);
   }
 
   .transform-cta {
