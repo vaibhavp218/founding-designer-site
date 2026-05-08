@@ -2154,6 +2154,7 @@
   }
 
   .values__card-badge {
+    top: calc(50% + 30px);
     left: 50%;
     right: auto;
     width: min(clamp(190px, 55.34vw, 228px), calc(100% - (var(--mobile-page-pad) * 2)));
