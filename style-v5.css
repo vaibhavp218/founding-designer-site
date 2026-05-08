@@ -1274,7 +1274,7 @@
   }
 
   .engagement__card-panel--cobuild {
-    width: min(324px, 100%);
+    width: min(389px, 100%);
     padding: 0;
     height: auto;
     min-height: 0;
@@ -1283,7 +1283,7 @@
   }
 
   .engagement__card-panel--fixed {
-    width: min(332px, 100%);
+    width: min(398px, 100%);
     padding: 0;
     height: auto;
     min-height: 0;
