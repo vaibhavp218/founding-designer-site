@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founding Designer — v5</title>
+  <meta name="description" content="A UI/UX Design Studio that turns ideas into interfaces. We design zero-to-one experiences that scale for startups and enterprises.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-v2.css">
+  <link rel="stylesheet" href="style-v5.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       Header
+       ============================================================ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="Founding Designer Home">
+        <img src="Logo FD.svg" alt="Founding Designer" width="142" height="43">
+      </a>
+
+      <div class="header__right">
+        <nav class="header__nav" aria-label="Main navigation">
+          <a href="#why-us" class="header__nav-link" id="nav-why-us">Why Us</a>
+          <a href="#blog" class="header__nav-link" id="nav-blog">Blog</a>
+          <a href="#portfolio" class="header__nav-link" id="nav-portfolio">Portfolio</a>
+          <a href="https://www.behance.net" class="header__nav-link" id="nav-behance" target="_blank" rel="noopener">Behance</a>
+        </nav>
+
+        <div class="cta cta--sm">
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+          <a href="#contact" class="cta__btn" id="header-cta">Let's Talk</a>
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       Hero Section
+       ============================================================ -->
+  <section class="hero" id="hero-section">
+    <div class="hero__bg" id="hero-bg"></div>
+
+    <div class="hero__content">
+      <div class="hero__headline">
+        <h1>
+          <span class="hero__headline-line">Designing</span>
+          <span class="hero__headline-line hero__headline-line--italic">Zero to One</span>
+          <span class="hero__headline-line">Experiences <br class="hero__mobile-break">that scale</span>
+        </h1>
+      </div>
+
+      <p class="hero__tagline">A  UI/UX Design Studio that turns ideas into interfaces.</p>
+
+      <div class="hero__ctas">
+        <div class="cta cta--portfolio">
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+          <a href="#portfolio" class="cta__btn cta__btn--secondary" id="cta-portfolio">
+            <span class="cta__btn--secondary-inner">Portfolio</span>
+          </a>
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+        </div>
+
+        <div class="cta cta--conversation">
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+          <a href="#contact" class="cta__btn cta__btn--primary" id="cta-conversation">Have a Conversation</a>
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__bottom-fade"></div>
+  </section>
+
+  <!-- ============================================================
+       Roles Section
+       ============================================================ -->
+  <section class="roles" id="roles">
+    <div class="roles__sticky">
+      <div class="roles__inner">
+
+        <h2 class="roles__heading">We show up <em class="roles__heading-accent">differently</em><br>depending on who needs us.</h2>
+
+        <div class="roles-mobile" aria-label="Roles overview">
+          <article class="roles-mobile__item roles-mobile__item--founder">
+            <div class="roles-mobile__media" aria-hidden="true">
+              <div class="roles-mobile__lottie" id="mobile-lottie-founder"></div>
+            </div>
+            <div class="roles-mobile__content">
+              <h3 class="roles-mobile__title">The Founder</h3>
+              <p class="roles-mobile__tagline">Move fast. Ship right. We carry the complexity</p>
+              <ul class="roles-mobile__bullets">
+                <li>Translate your vision into an experience users actually understand</li>
+                <li>Move faster with design that's built to scale</li>
+                <li>Ship a product that earns trust on first impression</li>
+                <li>Make design your unfair advantage, not an afterthought</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="roles-mobile__item roles-mobile__item--pm">
+            <div class="roles-mobile__media" aria-hidden="true">
+              <div class="roles-mobile__lottie" id="mobile-lottie-pm"></div>
+            </div>
+            <div class="roles-mobile__content">
+              <h3 class="roles-mobile__title">The Product manager</h3>
+              <p class="roles-mobile__tagline">Clarity from chaos. Ship what matters</p>
+              <ul class="roles-mobile__bullets">
+                <li>Designer with skin in the product game</li>
+                <li>Someone who asks why before asking what</li>
+                <li>A collaborator who makes your products sharper</li>
+                <li>Designer who de-risks your decisions before they hit engineering</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="roles-mobile__item roles-mobile__item--cto">
+            <div class="roles-mobile__media" aria-hidden="true">
+              <div class="roles-mobile__lottie" id="mobile-lottie-cto"></div>
+            </div>
+            <div class="roles-mobile__content">
+              <h3 class="roles-mobile__title">The Tech Head</h3>
+              <p class="roles-mobile__tagline">Fewer debates. Better architecture. Faster.</p>
+              <ul class="roles-mobile__bullets">
+                <li>Less design debt. More system thinking</li>
+                <li>A design partner who talks in states, not just screens</li>
+                <li>Design decisions that respect your constraints.</li>
+                <li>Preserving the Tech bandwidth, and avoiding rework</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="roles__layout">
+
+          <!-- Left: Lottie Animation Panel -->
+          <div class="roles__anim">
+            <div class="roles__lottie roles__lottie--active" id="lottie-founder"></div>
+            <div class="roles__lottie" id="lottie-pm"></div>
+            <div class="roles__lottie" id="lottie-cto"></div>
+          </div>
+
+          <!-- Right: Accordion -->
+          <div class="roles__accordion">
+
+            <!-- The Founder -->
+            <div class="roles__item roles__item--active" data-role="founder">
+              <button class="roles__item-header" aria-expanded="true">
+                <span class="roles__item-name">The Founder</span>
+                <span class="roles__item-icon" aria-hidden="true"></span>
+              </button>
+              <div class="roles__item-body">
+                <div class="roles__item-inner">
+                  <p class="roles__tagline">Move fast. Ship right. We carry the complexity.</p>
+                  <ul class="roles__bullets">
+                    <li>Translate your vision into an experience users actually understand</li>
+                    <li>Move faster with design that's built to scale</li>
+                    <li>Ship a product that earns trust on first impression</li>
+                    <li>Make design your unfair advantage, not an afterthought</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Product Manager -->
+            <div class="roles__item" data-role="pm">
+              <button class="roles__item-header" aria-expanded="false">
+                <span class="roles__item-name">The Product Manager</span>
+                <span class="roles__item-icon" aria-hidden="true"></span>
+              </button>
+              <div class="roles__item-body">
+                <div class="roles__item-inner">
+                  <p class="roles__tagline">Clarity from chaos. Ship what matters.</p>
+                  <ul class="roles__bullets">
+                    <li>Designer who de-risks your decisions before they hit engineering</li>
+                    <li>A collaborator who makes your products sharper</li>
+                    <li>Someone who asks why before asking what</li>
+                    <li>Designer with skin in the product game</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Tech Head -->
+            <div class="roles__item" data-role="cto">
+              <button class="roles__item-header" aria-expanded="false">
+                <span class="roles__item-name">The Tech Head</span>
+                <span class="roles__item-icon" aria-hidden="true"></span>
+              </button>
+              <div class="roles__item-body">
+                <div class="roles__item-inner">
+                  <p class="roles__tagline">Fewer debates. Better architecture. Faster.</p>
+                  <ul class="roles__bullets">
+                    <li>Preserving the Tech bandwidth, and avoiding rework</li>
+                    <li>Design decisions that respect your constraints</li>
+                    <li>A design partner who talks in states, not just screens</li>
+                    <li>Less design debt. More system thinking</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /roles__accordion -->
+        </div><!-- /roles__layout -->
+      </div><!-- /roles__inner -->
+    </div><!-- /roles__sticky -->
+  </section>
+
+  <!-- ============================================================
+       Values Section (Section 3)
+       ============================================================ -->
+  <section class="values" id="values">
+    <div class="values__inner">
+
+      <h2 class="values__heading">
+        <span class="values__heading-line">The way we show up,</span>
+        <em class="values__heading-accent">every single time.</em>
+      </h2>
+
+      <div class="values__grid">
+
+        <!-- Column 1: two beige cards stacked -->
+        <div class="values__col">
+
+          <div class="values__card values__card--founding">
+            <div class="values__card-body">
+              <h3 class="values__card-title">Founding Mindset</h3>
+              <p class="values__card-desc">We've been the first designer in the room. We truly build from scratch.</p>
+            </div>
+            <div class="values__icon-wrap">
+              <img src="Founding Mindset.svg" class="values__icon" alt="">
+            </div>
+          </div>
+
+          <div class="values__card values__card--prompt">
+            <div class="values__card-body">
+              <h3 class="values__card-title">Prompt deliveries</h3>
+              <p class="values__card-desc">You will never chase us for an update.</p>
+            </div>
+            <div class="values__icon-wrap">
+              <img src="Prompt Delivery.svg" class="values__icon" alt="">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Column 2: tall orange gradient card -->
+        <div class="values__col">
+
+          <div class="values__card values__card--orange">
+            <div class="values__card-body">
+              <h3 class="values__card-title">AI-native</h3>
+              <p class="values__card-desc">We're not figuring out AI. We're already designing with it.</p>
+            </div>
+            <div class="values__card-badge">
+              <img src="Ai native.svg" alt="">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Column 3: two beige cards stacked -->
+        <div class="values__col">
+
+          <div class="values__card values__card--motion">
+            <div class="values__card-body">
+              <h3 class="values__card-title">Motion as User Experience</h3>
+              <p class="values__card-desc">Motion in form of micro interactions — our differentiator, and yours.</p>
+            </div>
+            <div class="values__icon-wrap">
+              <img src="Motion as UX.svg" class="values__icon" alt="">
+            </div>
+          </div>
+
+          <div class="values__card values__card--business">
+            <div class="values__card-body">
+              <h3 class="values__card-title">Business-aware design</h3>
+              <p class="values__card-desc">Design that earns its keep — tied to outcomes, not aesthetics.</p>
+            </div>
+            <div class="values__icon-wrap">
+              <img src="Business Aware Design.svg" class="values__icon" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- /values__grid -->
+    </div><!-- /values__inner -->
+  </section>
+
+  <!-- ============================================================
+       Portfolio Section (Section 4)
+       ============================================================ -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio__inner">
+
+      <!-- Header row -->
+      <div class="portfolio__header">
+        <h2 class="portfolio__heading"><span class="portfolio__heading-primary">Problems we've chosen</span> to<br> show up for</h2>
+        <a href="#" class="portfolio__view-all">View All</a>
+      </div>
+
+      <!-- Card grid -->
+      <div class="portfolio__grid">
+
+        <!-- Finova -->
+        <div class="portfolio__card">
+          <div class="portfolio__card-body">
+            <h3 class="portfolio__card-title">Finova</h3>
+            <p class="portfolio__card-desc">Simplifying financial decision-making through AI-powered insights and guidance.</p>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag">Fintech</span>
+              <span class="portfolio__tag">SaaS</span>
+            </div>
+          </div>
+          <div class="portfolio__card-image">
+            <picture>
+              <source media="(max-width: 767px)" srcset="Finnova artifact for phone.svg">
+              <img src="Finova.png" alt="Finova">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Questo -->
+        <div class="portfolio__card portfolio__card--questo">
+          <div class="portfolio__card-body">
+            <h3 class="portfolio__card-title">Questo</h3>
+            <p class="portfolio__card-desc">Streamlining resale through intuitive buying and selling experiences.</p>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag">Ecom</span>
+              <span class="portfolio__tag">Mobile Applications</span>
+            </div>
+          </div>
+          <div class="portfolio__card-image">
+            <picture>
+              <source media="(max-width: 767px)" srcset="Questo artifact for phone.svg">
+              <img src="Questo.png" alt="Questo">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Aero Buzz -->
+        <div class="portfolio__card portfolio__card--aerobuzz">
+          <div class="portfolio__card-body">
+            <h3 class="portfolio__card-title">Aero Buzz</h3>
+            <p class="portfolio__card-desc">Enhancing flight control and decision-making through clear, real-time data access.</p>
+            <div class="portfolio__card-tags">
+              <span class="portfolio__tag">Deep Tech</span>
+              <span class="portfolio__tag">IOT</span>
+            </div>
+          </div>
+          <div class="portfolio__card-image">
+            <picture>
+              <source media="(max-width: 767px)" srcset="Aero Buzz artifact for phone.svg">
+              <img src="Aero Buzz.png" alt="Aero Buzz">
+            </picture>
+          </div>
+        </div>
+
+      </div><!-- /portfolio__grid -->
+
+      <div class="portfolio__mobile-cta">
+        <div class="cta">
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+          <a href="#" class="cta__btn cta__btn--primary">View More</a>
+          <div class="cta__dots">
+            <span class="cta__dot"></span>
+            <span class="cta__dot"></span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /portfolio__inner -->
+  </section>
+
+  <!-- ============================================================
+       Services Section (Section 5)
+       ============================================================ -->
+  <section class="services" id="services">
+
+    <!-- Decorative background illustration -->
+    <img src="Group 1171279294.svg" class="services__bg-deco" aria-hidden="true" alt="">
+
+    <!-- ── Service cards (absolutely positioned) ── -->
+
+    <!-- Build from scratch | Pre-PMF: active #FF3636 -->
+    <div class="svc-card svc-card--build" style="left:79.74px;top:480px;transform:rotate(-8.34deg);">
+      <svg class="svc-card__artifact" width="200" height="196" viewBox="0 0 200 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="100.338" y="0.64563" width="99.0163" height="95.4771" rx="25.1005" stroke="white" stroke-width="1.29126"/>
+        <path d="M109.837 47.4834C133.807 47.4834 153.192 66.1223 153.192 89.0586C153.192 111.995 133.807 130.634 109.837 130.634C85.8681 130.634 66.483 111.995 66.4829 89.0586C66.4829 66.1222 85.8681 47.4834 109.837 47.4834Z" stroke="white" stroke-width="1.29126"/>
+        <mask id="v2-bfs-mask" fill="white">
+          <path d="M0 121.897C0 107.677 11.5269 96.1504 25.7461 96.1504H74.5615C88.7807 96.1504 100.308 107.677 100.308 121.897V170.254C100.308 184.474 88.7807 196.001 74.5615 196.001H25.7461C11.5269 196.001 0 184.474 0 170.254V121.897Z"/>
+        </mask>
+        <path d="M-1.29126 121.897C-1.29126 106.964 10.8138 94.8591 25.7461 94.8591H74.5615C89.4938 94.8591 101.599 106.964 101.599 121.897H99.0163C99.0163 108.39 88.0675 97.4417 74.5615 97.4417H25.7461C12.2401 97.4417 1.29126 108.39 1.29126 121.897H-1.29126ZM100.308 196.001H0H100.308M25.7461 196.001C10.8138 196.001 -1.29126 183.895 -1.29126 168.963V121.897C-1.29126 106.964 10.8138 94.8591 25.7461 94.8591V97.4417C12.2401 97.4417 1.29126 108.39 1.29126 121.897V170.254C1.29126 184.474 12.2401 196.001 25.7461 196.001V196.001ZM74.5615 94.8591C89.4938 94.8591 101.599 106.964 101.599 121.897V168.963C101.599 183.895 89.4938 196.001 74.5615 196.001V196.001C88.0675 196.001 99.0163 184.474 99.0163 170.254V121.897C99.0163 108.39 88.0675 97.4417 74.5615 97.4417V94.8591Z" fill="white" mask="url(#v2-bfs-mask)"/>
+        <line x1="99.9518" y1="47.4609" x2="99.9518" y2="96.1533" stroke="white" stroke-width="0.518875"/>
+        <rect x="98.3438" y="45.5" width="5" height="5" rx="2.5" fill="#4C4C4C" stroke="white"/>
+        <rect x="97.3438" y="127.5" width="5" height="5" rx="2.5" fill="#4C4C4C" stroke="white"/>
+      </svg>
+      <div class="svc-card__label">
+        <svg class="svc-card__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M26.7954 19.5262C26.7019 19.8189 24.2696 26.6031 16.0371 26.6031C13.6583 26.6031 12.2951 25.7783 11.8273 24.0889C11.7048 23.6066 11.6508 23.1096 11.667 22.6124C16.6385 22.0803 22.3986 19.1937 24.4032 15.7218C25.6327 13.5934 25.3655 11.3985 23.6548 9.69586C21.8105 7.86014 19.2847 7.64731 16.7454 9.11056C13.5112 10.9729 10.2904 15.6154 9.2881 20.0184C8.88717 19.9785 8.4996 19.912 8.1254 19.8189C6.21429 19.3134 5.31887 18.0896 5.31887 15.9612C5.31887 8.96423 13.7785 5.2529 13.8721 5.21299L15.1016 4.6809L14.0458 2.24658L12.8163 2.76537C12.402 2.9383 2.646 7.19503 2.646 15.9612C2.646 19.2735 4.34327 21.5615 7.43045 22.3862C7.91157 22.5193 8.43278 22.5991 8.96735 22.6523C8.96735 23.3972 9.04754 24.1022 9.23464 24.7806C9.68903 26.4567 11.1725 29.2768 16.0238 29.2768C26.2208 29.2768 29.2946 20.4707 29.3213 20.3909L29.7356 19.1272L27.2097 18.2891L26.7821 19.5395L26.7954 19.5262ZM18.0819 11.4119C18.857 10.9596 19.4985 10.7999 20.0197 10.7999C20.9819 10.7999 21.5299 11.3453 21.7571 11.5715C22.6124 12.4228 22.7059 13.2875 22.0778 14.3783C20.6746 16.7993 16.1708 19.2735 12.0946 19.8987C13.0569 16.5731 15.4624 12.9017 18.0819 11.3985V11.4119Z" fill="white"/>
+        </svg>
+        <span class="svc-card__name">Build From Scratch</span>
+      </div>
+    </div>
+
+    <div class="svc-card svc-card--ux disabled" style="left:326.2px;top:641px;transform:rotate(-5.15deg);">
+      <img src="UX Audit.svg" class="svc-card__artifact" alt="">
+      <div class="svc-card__label">
+        <img src="UX Audit icon.svg" class="svc-card__icon" alt="">
+        <span class="svc-card__name">UX Audit</span>
+      </div>
+    </div>
+
+    <div class="svc-card svc-card--design-system disabled" style="left:796px;top:618px;transform:rotate(4.37deg);">
+      <img src="Craft Design system.svg" class="svc-card__artifact" alt="">
+      <div class="svc-card__label">
+        <img src="Craft Design system icon.svg" class="svc-card__icon" alt="">
+        <span class="svc-card__name">Craft Design System</span>
+      </div>
+    </div>
+
+    <div class="svc-card svc-card--revamp disabled" style="left:587.83px;top:648.92px;transform:rotate(3.86deg);">
+      <img src="Product Revamp.svg" class="svc-card__artifact" alt="">
+      <div class="svc-card__label">
+        <img src="Product Revamp icon.svg" class="svc-card__icon" alt="">
+        <span class="svc-card__name">Product Revamp</span>
+      </div>
+    </div>
+
+    <div class="svc-card svc-card--strategic disabled" style="left:946.48px;top:663px;transform:rotate(7.26deg);">
+      <img src="Strategic Build.svg" class="svc-card__artifact" alt="">
+      <div class="svc-card__label">
+        <img src="Strategic rebuild icon.svg" class="svc-card__icon" alt="">
+        <span class="svc-card__name">Strategic Build</span>
+      </div>
+    </div>
+
+    <!-- Central content -->
+    <div class="services__inner">
+      <h2 class="services__heading">Every stage of the product,<br>something to <em>sharpen.</em></h2>
+      <div class="services__selector-wrap">
+        <p class="services__label">Select where your product stands</p>
+        <div class="services__stages" role="tablist" aria-label="Product stages">
+          <button class="services__stage services__stage--active" data-stage="pre-pmf" role="tab" aria-selected="true">
+            <span class="services__stage-name">Pre-PMF</span>
+            <span class="services__stage-sub">Still figuring it out</span>
+          </button>
+          <button class="services__stage" data-stage="post-pmf" role="tab" aria-selected="false">
+            <span class="services__stage-name">Post-PMF</span>
+            <span class="services__stage-sub">Discovered your Niche</span>
+          </button>
+          <button class="services__stage" data-stage="scaling" role="tab" aria-selected="false">
+            <span class="services__stage-name">Scaling the Platform</span>
+            <span class="services__stage-sub">Growing, but breaking</span>
+          </button>
+          <button class="services__stage" data-stage="pmf-reinvention" role="tab" aria-selected="false">
+            <span class="services__stage-name">PMF Re-invention</span>
+            <span class="services__stage-sub">Time to Pivot</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       Engagement Models Section (Section 6)
+       ============================================================ -->
+  <section class="engagement" id="engagement">
+    <div class="engagement__inner">
+
+      <h2 class="engagement__heading">Empower your Team &amp; put <em class="engagement__heading-accent">Design to work</em></h2>
+
+      <div class="engagement__cards">
+
+        <!-- Co-Build Model -->
+        <div class="engagement__card engagement__card--cobuild">
+          <div class="engagement__card-content">
+            <div class="engagement__card-label">
+              <h3 class="engagement__card-name"><strong>Co</strong> - <strong>Build Model</strong></h3>
+              <p class="engagement__card-desc">We embed into your team and build alongside you as your product evolves, so does the design.</p>
+            </div>
+            <div class="engagement__bullets">
+              <ul class="engagement__bullet-col">
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Fixed hourly pricing</span>
+                </li>
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Scale as you grow</span>
+                </li>
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Dedicated communication</span>
+                </li>
+              </ul>
+              <ul class="engagement__bullet-col">
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Flexible deployment</span>
+                </li>
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Full product design scope</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="engagement__card-panel engagement__card-panel--cobuild">
+            <picture>
+              <source media="(max-width: 767px)" srcset="Co build mobile artifact.svg">
+              <img src="Co Build Model New.svg" class="engagement__card-illus" alt="">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Fixed-cost Model -->
+        <div class="engagement__card engagement__card--fixed">
+          <div class="engagement__card-content">
+            <div class="engagement__card-label">
+              <h3 class="engagement__card-name"><strong>Fixed</strong> - <strong>Cost Model</strong></h3>
+              <p class="engagement__card-desc">You know what you need. We scope it, price it, and deliver it</p>
+            </div>
+            <div class="engagement__bullets">
+              <ul class="engagement__bullet-col">
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Fixed cost pricing</span>
+                </li>
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Timeline-locked delivery</span>
+                </li>
+              </ul>
+              <ul class="engagement__bullet-col">
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Scheduled Commitment</span>
+                </li>
+                <li class="engagement__bullet">
+                  <img src="charm_tick.svg" class="engagement__tick" alt="">
+                  <span>Limited iterations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="engagement__card-panel engagement__card-panel--fixed">
+            <picture>
+              <source media="(max-width: 767px)" srcset="Fixed Cost Model Mobile artifact.svg">
+              <img src="Fixed Cost Model New.svg" class="engagement__card-illus" alt="">
+            </picture>
+          </div>
+        </div>
+
+      </div><!-- /engagement__cards -->
+    </div><!-- /engagement__inner -->
+  </section>
+
+  <!-- ============================================================
+       Transform CTA Section (Section 7)
+       ============================================================ -->
+  <section class="transform-cta" id="contact">
+    <div class="transform-cta__card">
+      <div class="transform-cta__content">
+        <h2 class="transform-cta__heading">
+          <span>Ready to Transform</span>
+          <em>Your Product?</em>
+        </h2>
+
+        <form class="transform-cta__form" action="#" method="post">
+          <label class="transform-cta__label" for="transform-email">Drop your email ID &amp; just sit tight!</label>
+          <div class="transform-cta__field">
+            <input id="transform-email" class="transform-cta__input" type="email" name="email" placeholder="Your email address" autocomplete="email">
+            <button class="transform-cta__submit" type="submit">
+              <span class="transform-cta__submit-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+              <span class="transform-cta__submit-label">Submit</span>
+              <span class="transform-cta__submit-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="transform-cta__visual" aria-hidden="true">
+        <img src="tRANSFORM CARD ASSET.svg" class="transform-cta__image" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="Foundinf Designer Footer logo.svg" class="site-footer__logo" alt="Founding Designer">
+          <p class="site-footer__tagline">Let's lay an excellent foundation<br>of your Product's Design.</p>
+          <a class="site-footer__email" href="mailto:riddhishree@founding-designer.com">riddhishree@founding-designer.com</a>
+        </div>
+
+        <div class="site-footer__links">
+          <nav class="site-footer__nav" aria-label="Footer navigation">
+            <a href="#portfolio">Work</a>
+            <a href="#roles">Process</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">About us</a>
+          </nav>
+
+          <div class="site-footer__socials" aria-label="Social links">
+            <a class="site-footer__social" href="#" aria-label="Twitter X">
+              <span class="site-footer__social-icon"><img src="Twitter profile.svg" alt=""></span>
+              <span>Twitter (x)</span>
+            </a>
+            <a class="site-footer__social" href="#" aria-label="LinkedIn">
+              <span class="site-footer__social-icon"><img src="Linkedin icon.svg" alt=""></span>
+              <span>Linkedin</span>
+            </a>
+            <a class="site-footer__social" href="#" aria-label="Behance">
+              <span class="site-footer__social-icon"><img src="BEhgance icon.svg" alt=""></span>
+              <span>Behance</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <img src="Footer word mark.svg" class="site-footer__wordmark" alt="Founding Designer">
+      <p class="site-footer__copyright">Copyright, Founding Designer, 2026</p>
+    </div>
+  </footer>
+
+  <script src="lottie.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
