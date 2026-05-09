@@ -498,4 +498,45 @@ document.addEventListener('DOMContentLoaded', () => {
     setScrollStage(0);
   }
 
+  // ============================================================
+  // Launch Loader Animation
+  // ============================================================
+  const launchLoader = document.getElementById('launch-loader');
+  const launchLoaderAnimContainer = document.getElementById('launch-loader-animation');
+  
+  if (launchLoader && launchLoaderAnimContainer) {
+    const isMobile = window.innerWidth <= 767;
+    const animationPath = isMobile ? 'Launch Animation Mobile.json' : 'Launch animation Desktop.json';
+    
+    const launchAnim = lottie.loadAnimation({
+      container: launchLoaderAnimContainer,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: animationPath
+    });
+
+    launchAnim.addEventListener('complete', () => {
+      launchLoader.classList.add('fade-out');
+      setTimeout(() => {
+        launchLoader.style.display = 'none';
+      }, 500);
+    });
+  }
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.header__menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenuBtn = document.querySelector('.mobile-menu__close');
+  const menuLinks = document.querySelectorAll('.mobile-menu__nav a, .mobile-menu__cta-link');
+
+  function toggleMenu() {
+    if(mobileMenu) { mobileMenu.classList.toggle('is-open'); }
+  }
+
+  if(menuToggle) menuToggle.addEventListener('click', toggleMenu);
+  if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+  menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
 });
