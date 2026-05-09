@@ -32,12 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load all three animations; only the first plays on load
     const roleAnims = {};
     roleKeys.forEach(key => {
+      const container = document.getElementById(`lottie-${key}`);
+      if (!container) return;
       roleAnims[key] = lottie.loadAnimation({
-        container: document.getElementById(`lottie-${key}`),
+        container,
         renderer:  'svg',
         loop:      true,
         autoplay:  key === 'founder',
         path:      lottieFiles[key],
+        rendererSettings: { preserveAspectRatio: 'xMidYMid meet' }
+      });
+    });
+
+    roleKeys.forEach(key => {
+      const mobileContainer = document.getElementById(`mobile-lottie-${key}`);
+      if (!mobileContainer) return;
+      lottie.loadAnimation({
+        container: mobileContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: lottieFiles[key],
         rendererSettings: { preserveAspectRatio: 'xMidYMid meet' }
       });
     });
@@ -61,7 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
       lotties.forEach((el, i) => {
         const isActive = i === step;
         el.classList.toggle('roles__lottie--active', isActive);
-        isActive ? roleAnims[roleKeys[i]].play() : roleAnims[roleKeys[i]].stop();
+        const anim = roleAnims[roleKeys[i]];
+        if (!anim) return;
+        isActive ? anim.play() : anim.stop();
       });
     }
 

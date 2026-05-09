@@ -1946,11 +1946,30 @@
   .roles-mobile__media {
     width: 100%;
     aspect-ratio: 1452 / 1046;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     background:
       radial-gradient(circle at 50% 56%, rgba(255, 255, 255, 0.86) 0 13%, transparent 14%),
       radial-gradient(circle at 50% 56%, transparent 0 20%, rgba(255, 255, 255, 0.85) 21% 28%, transparent 29%),
       radial-gradient(circle at 50% 56%, transparent 0 35%, rgba(255, 255, 255, 0.76) 36% 43%, transparent 44%),
       linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.14));
+  }
+
+  .roles-mobile__lottie {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .roles-mobile__lottie svg {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   .roles-mobile__item--founder .roles-mobile__media {
