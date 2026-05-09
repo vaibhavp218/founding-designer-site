@@ -482,6 +482,19 @@
   display: none;
 }
 
+.values__heading-line,
+.values__heading-accent {
+  display: block;
+}
+
+.values__heading-line {
+  white-space: nowrap;
+}
+
+.portfolio__heading-primary {
+  color: var(--orange);
+}
+
 /* ============================================================
    Fluid desktop layout
    Keeps the 1440px design proportions while allowing every
@@ -774,6 +787,7 @@
 
   .hero__headline-line:last-child {
     line-height: normal;
+    margin-top: -1px;
   }
 
   .hero__mobile-break {
@@ -864,6 +878,15 @@
     margin: 0 0 32px;
   }
 
+  .values__heading-line,
+  .values__heading-accent {
+    display: block;
+  }
+
+  .values__heading-line {
+    white-space: nowrap;
+  }
+
   .values__grid {
     display: flex;
     flex-direction: column;
@@ -896,7 +919,7 @@
   }
 
   .values__card-title {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
   }
 
@@ -1010,7 +1033,7 @@
   }
 
   .values__card--business .values__icon {
-    width: min(82%, 266px);
+    width: min(98.4%, 319px);
   }
 
   .portfolio {
@@ -1033,6 +1056,10 @@
     font-size: clamp(28px, 6.2vw, 40px);
     line-height: 1.18;
     letter-spacing: 0;
+  }
+
+  .portfolio__heading-primary {
+    color: var(--orange);
   }
 
   .portfolio__heading br {
@@ -1063,7 +1090,7 @@
   }
 
   .portfolio__card-title {
-    font-size: 28px;
+    font-size: 20px;
     line-height: normal;
   }
 
@@ -1085,7 +1112,7 @@
   .portfolio__card-image {
     left: 20px;
     top: 164px;
-    width: calc(100% - 40px);
+    width: 141.1%;
     height: calc(100% - 164px);
   }
 
@@ -1095,10 +1122,16 @@
     object-position: left top;
   }
 
+  .portfolio__card-image picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
   .portfolio__card--questo .portfolio__card-image {
     left: clamp(28px, 6.26vw, 48px);
     top: 185px;
-    width: calc(100% - clamp(48px, 8.87vw, 68px));
+    width: 141.1%;
     height: calc(100% - 185px);
   }
 
@@ -1155,7 +1188,7 @@
     width: min(100%, calc(var(--mobile-narrow-max) + (var(--mobile-page-pad) * 2)));
     max-width: none;
     margin: 0 auto;
-    padding: 44px 0 0;
+    padding: 44px 0;
     gap: 33px;
   }
 
@@ -1193,7 +1226,7 @@
     background: #fafafa;
     border: 0.8px solid var(--orange);
     border-radius: 10px;
-    padding: 24px clamp(1px, 0.24vw, 1px) 24px 20px;
+    padding: 24px 20px;
     gap: 20px;
   }
 
@@ -1218,7 +1251,7 @@
   }
 
   .engagement__card--cobuild .engagement__card-content {
-    width: min(343px, 100%);
+    width: min(297px, 100%);
   }
 
   .engagement__card-label {
@@ -1274,8 +1307,9 @@
   }
 
   .engagement__card-panel--cobuild {
-    width: 100%;
-    align-self: stretch;
+    width: min(324px, 100%);
+    max-width: 100%;
+    align-self: flex-start;
     padding: 0;
     height: auto;
     min-height: 0;
@@ -1283,14 +1317,27 @@
     overflow: hidden;
   }
 
-  .engagement__card-panel--fixed {
+  .engagement__card-panel--cobuild picture {
     width: 100%;
-    align-self: stretch;
+    height: 100%;
+    display: block;
+  }
+
+  .engagement__card-panel--fixed {
+    width: min(325px, 100%);
+    max-width: 100%;
+    align-self: flex-start;
     padding: 0;
     height: auto;
     min-height: 0;
-    aspect-ratio: 332 / 185;
+    aspect-ratio: 325 / 185;
     overflow: hidden;
+  }
+
+  .engagement__card-panel--fixed picture {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   .engagement__card-illus {
@@ -1300,19 +1347,23 @@
   }
 
   .engagement__card-panel--cobuild .engagement__card-illus {
-    width: 108.974%;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
+    display: block;
     object-fit: fill;
-    transform: translateX(-8.235%);
+    transform: none;
+    content: url('Co build mobile artifact.svg');
   }
 
   .engagement__card-panel--fixed .engagement__card-illus {
-    width: 108.974%;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     height: 100%;
+    display: block;
     object-fit: fill;
-    transform: translateX(-8.235%);
+    transform: none;
+    content: url('Fixed Cost Model Mobile artifact.svg');
   }
 
   .transform-cta {
@@ -1823,6 +1874,7 @@
 
   .hero__headline-line:last-child {
     line-height: normal;
+    margin-top: -1px;
   }
 
   .hero__mobile-break {
@@ -2064,7 +2116,7 @@
   }
 
   .values__heading {
-    width: min(273px, 100%);
+    width: min(320px, 100%);
     max-width: 100%;
     font-size: 28px;
     line-height: 1.25;
@@ -2104,7 +2156,7 @@
   }
 
   .values__card-title {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
   }
 
@@ -2225,8 +2277,8 @@
   }
 
   .values__card--business .values__icon {
-    width: 266px;
-    max-width: 82%;
+    width: 319px;
+    max-width: 98.4%;
   }
 
   .portfolio {
@@ -2280,7 +2332,7 @@
   }
 
   .portfolio__card-title {
-    font-size: 28px;
+    font-size: 20px;
     line-height: normal;
   }
 
@@ -2303,7 +2355,7 @@
   .portfolio__card-image {
     left: 20px;
     top: 164px;
-    width: calc(100% - 40px);
+    width: 141.1%;
     height: calc(100% - 164px);
   }
 
@@ -2313,10 +2365,16 @@
     object-position: left top;
   }
 
+  .portfolio__card-image picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
   .portfolio__card--questo .portfolio__card-image {
     left: clamp(28px, 11.65vw, 48px);
     top: 185px;
-    width: calc(100% - clamp(48px, 16.5vw, 68px));
+    width: 141.1%;
     height: calc(100% - 185px);
   }
 
