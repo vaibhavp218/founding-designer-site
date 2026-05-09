@@ -7,9 +7,13 @@
   <meta name="description" content="A UI/UX Design Studio that turns ideas into interfaces. We design zero-to-one experiences that scale for startups and enterprises.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style-v2.css">
-  <link rel="stylesheet" href="style-v5.css">
+  <link rel="stylesheet" href="style-v5.css?v=launch-3">
 </head>
 <body>
+
+  <div class="launch-loader" id="launch-loader" role="status" aria-label="Loading Founding Designer">
+    <div class="launch-loader__animation" id="launch-loader-animation" aria-hidden="true"></div>
+  </div>
 
   <!-- ============================================================
        Header
@@ -39,9 +43,61 @@
             <span class="cta__dot"></span>
           </div>
         </div>
+
+        <button class="header__menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+      <div class="mobile-menu__content">
+        <div class="mobile-menu__main">
+          <div class="mobile-menu__top">
+            <a href="/" class="mobile-menu__logo" aria-label="Founding Designer Home">
+              <img src="fd logo for header menu.svg" alt="Founding Designer" width="44" height="44">
+            </a>
+            <button class="mobile-menu__close" type="button" aria-label="Close menu">
+              <img src="close icon.svg" alt="" width="34" height="34">
+            </button>
+          </div>
+
+          <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+            <a href="#why-us">Why us</a>
+            <a href="#blog">Blog</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="https://www.behance.net" target="_blank" rel="noopener">Behance</a>
+          </nav>
+        </div>
+
+        <div class="mobile-menu__bottom">
+          <div class="mobile-menu__cta">
+            <div class="mobile-menu__dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+            <a href="#contact" class="mobile-menu__cta-link">Have a Conversation</a>
+            <div class="mobile-menu__dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="mobile-menu__socials" aria-label="Social links">
+            <a href="#">Twitter (x)</a>
+            <a href="#">Linkedin</a>
+            <a href="https://www.behance.net" target="_blank" rel="noopener">Behance</a>
+          </div>
+
+          <p class="mobile-menu__copyright">Copyright, Founding Designer, 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        Hero Section
@@ -659,6 +715,6 @@
   </footer>
 
   <script src="lottie.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=launch-3"></script>
 </body>
 </html>
